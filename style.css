@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* custom font setup */
+@font-face {
+    font-family: 'ES Rebond Grotesque TRIAL';
+    src: url('/assets/fonts/ESRebondGrotesqueTRIAL-Regular-BF66189040b697b.otf') format('OpenType');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'ES Rebond Grotesque TRIAL';
+    src: url('/assets/fonts/ESRebondGrotesqueTRIAL-Medium-BF6618904088566.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'ES Rebond Grotesque TRIAL';
+    src: url('/assets/fonts/ESRebondGrotesqueTRIAL-Semibold-BF66189040640ea.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+  } 
+  @font-face {
+      font-family: 'ES Rebond Grotesque TRIAL';
+      src: url('/assets/fonts/ESRebondGrotesqueTRIAL-Bold-BF66189040400df.otf') format('opentype');
+      font-weight: 700;
+      font-style: normal;
+    } 
+
+
+    /* CountUp */
+
+  @property --num-users {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+  }
+  
+  @property --num-reg-users {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+  }
+
+  @property --num-percent {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+  }
+  
+  @keyframes counter {
+    from {
+        --num-users: 0;
+        --num-reg-users: 0;
+        --num-percent:0;
+    }
+    to {
+        --num-users: 4;
+        --num-reg-users: 95;
+        --num-percent:100;
+    }
+  }
